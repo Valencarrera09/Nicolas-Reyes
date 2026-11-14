@@ -1,0 +1,43 @@
+PÁGINA WEB — NICOLÁS REYES · CHEF PRIVADO
+==========================================
+
+ARCHIVOS DEL PROYECTO
+---------------------
+index.html        → contenido y textos de la página.
+css/styles.css    → diseño, colores, animaciones y adaptación a móvil.
+js/main.js        → interacciones (menú, galería, formulario, etc.).
+images/           → todas las fotografías, ya enlazadas en el HTML.
+images/LEEME.txt  → guía con el nombre y uso de cada foto.
+
+CÓMO VER LA PÁGINA
+------------------
+Haz doble clic en index.html y se abrirá en tu navegador.
+Necesita conexión a internet para cargar las tipografías de Google Fonts.
+
+CAMBIAR LOS CONTACTOS
+---------------------
+Abre index.html con un editor de texto (Bloc de notas, VS Code, etc.) y
+usa "Buscar y reemplazar" con estos datos:
+
+  WhatsApp:  +34 600 000 000   →  https://wa.me/34600000000
+  Email:     hola@nicolasreyes.com
+  Instagram: @nicolasreyes.chef → https://instagram.com/nicolasreyes.chef
+
+Los tres aparecen en varias zonas: menú móvil, sección de contacto,
+pie de página, botón flotante de WhatsApp y formulario. Si cambias el
+número, reemplaza también "34600000000" en el enlace de WhatsApp.
+
+CAMBIAR LAS FOTOS
+-----------------
+1. Mira images/LEEME.txt para saber qué foto corresponde a cada sitio.
+2. Guarda tu nueva foto con el MISMO nombre de archivo.
+3. Sobrescribe el archivo dentro de images/.
+
+No hace falta tocar el HTML ni el CSS. Mantén el formato JPG y, a ser
+posible, un peso menor de 500 KB por imagen.
+
+ARCHIVOS ANTIGUOS
+-----------------
+En la raíz pueden quedar archivos del diseño anterior que ya no se usan:
+estilos.css, script.js, plato1.png, plato2.png e info.png.
+No afectan a la página; puedes eliminarlos si quieres dejar la carpeta limpia.

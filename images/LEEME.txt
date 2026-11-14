@@ -1,0 +1,96 @@
+GUÍA DE IMÁGENES — Nicolás Reyes · Chef privado
+================================================
+
+Todas las fotos de la página están en esta carpeta y el HTML ya las usa
+localmente. Para cambiar una imagen, reemplaza el archivo por otro con
+EL MISMO NOMBRE (por ejemplo, si quieres otra portada, sobrescribe
+"hero-mesa-elegante.jpg").
+
+Recomendaciones:
+- Formato JPG.
+- Mantén el nombre en minúsculas y sin espacios.
+- Intenta que cada archivo pese menos de 500 KB.
+- Respeta la proporción indicada para que el recorte se vea bien.
+
+
+LISTADO DE ARCHIVOS
+-------------------
+
+1) hero-mesa-elegante.jpg
+   Dónde: portada principal (hero) y vista previa al compartir la web.
+   Contenido: mesa elegante con plato gourmet y copa de vino.
+   Medida recomendada: 1600 × 2400 px (vertical, 2:3).
+
+2) chef-nicolas-reyes.jpg
+   Dónde: sección "El chef".
+   Contenido: retrato de Nicolás Reyes.
+   Medida recomendada: 1200 × 1500 px (vertical, 4:5).
+
+3) experiencia-cena-privada.jpg
+   Dónde: Experiencias 01 · Cenas privadas.
+   Contenido: platos gourmet emplatados.
+   Medida recomendada: 1200 × 900 px (horizontal, 4:3).
+
+4) experiencia-eventos.jpg
+   Dónde: Experiencias 02 · Eventos y celebraciones.
+   Contenido: mesa preparada con platos y vino.
+   Medida recomendada: 1200 × 900 px (horizontal, 4:3).
+
+5) experiencia-clases.jpg
+   Dónde: Experiencias 03 · Clases y talleres.
+   Contenido: chef cortando verduras en cocina.
+   Medida recomendada: 1200 × 900 px (horizontal, 4:3).
+
+6) menu-caviar.jpg
+   Dónde: sección "Menú".
+   Contenido: plato de caviar con presentación artística.
+   Medida recomendada: 1200 × 960 px (horizontal, 5:4).
+
+7) galeria-01-platos.jpg
+   Dónde: Galería, foto 1 (y visor ampliado).
+   Contenido: platos finamente presentados.
+   Medida recomendada: 1200 × 1500 px (vertical, 4:5).
+
+8) galeria-02-marisco.jpg
+   Dónde: Galería, foto 2 (y visor ampliado).
+   Contenido: plato de marisco emplatado.
+   Medida recomendada: 1200 × 1500 px (vertical, 4:5).
+
+9) galeria-03-postre-chocolate.jpg
+   Dónde: Galería, foto 3 (y visor ampliado).
+   Contenido: postre de chocolate con flor comestible.
+   Medida recomendada: 1200 × 1500 px (vertical, 4:5).
+
+10) galeria-04-plato-minimalista.jpg
+    Dónde: Galería, foto 4 (y visor ampliado).
+    Contenido: plato gourmet minimalista.
+    Medida recomendada: 1200 × 1500 px (vertical, 4:5).
+
+11) galeria-05-mesa-restaurante.jpg
+    Dónde: Galería, foto 5 (y visor ampliado).
+    Contenido: mesa de restaurante con luz cálida.
+    Medida recomendada: 1200 × 1500 px (vertical, 4:5).
+
+12) galeria-06-ravioli.jpg
+    Dónde: Galería, foto 6 (y visor ampliado).
+    Contenido: ravioli con salsa de tomate y hierbas.
+    Medida recomendada: 1200 × 1500 px (vertical, 4:5).
+
+
+FOTOS ORIGINALES
+----------------
+Las imágenes actuales son fotografías gratuitas de Pexels.
+Puedes consultar cada original en:
+
+  33097099 · https://www.pexels.com/photo/33097099/
+  32224391 · https://www.pexels.com/photo/32224391/
+  5865434  · https://www.pexels.com/photo/5865434/
+  5083908  · https://www.pexels.com/photo/5083908/
+  8511798  · https://www.pexels.com/photo/8511798/
+  26586541 · https://www.pexels.com/photo/26586541/
+  33033817 · https://www.pexels.com/photo/33033817/
+  12173356 · https://www.pexels.com/photo/12173356/
+  27972413 · https://www.pexels.com/photo/27972413/
+  34520959 · https://www.pexels.com/photo/34520959/
+  29962487 · https://www.pexels.com/photo/29962487/
+  20545314 · https://www.pexels.com/photo/20545314/

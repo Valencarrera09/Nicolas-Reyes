@@ -1,210 +1,534 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nicolás Reyes | Chef a domicilio · Experiencias Gourmet</title>
-  <meta name="description" content="Chef a domicilio. Experiencias gourmet y servicios gastronómicos en tu hogar.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="estilos.css">
-</head>
-<body>
-  <div class="progress" id="progress"></div>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0a0908" />
+  <meta name="description" content="Nicolás Reyes, chef privado. Cenas privadas, eventos y clases de cocina con menús de autor diseñados a medida." />
+  <title>Nicolás Reyes — Chef Privado</title>
 
-  <header class="nav" id="nav">
-    <a href="#inicio" class="logo">
-      <svg class="logo__mark" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-        <path d="M11 21C7 21 4.5 17.5 6 14C7 11.5 10 10.5 12.5 11.8C13.5 7.5 16.5 5 20 5C23.5 5 26.5 7.5 27.5 11.8C30 10.5 33 11.5 34 14C35.5 17.5 33 21 29 21"/>
-        <path d="M11 21V27H29V21"/>
-        <path d="M7 31H33M10 31L13 37M30 31L27 37M15 27V31M20 27V31M25 27V31"/>
-      </svg>
-      <span class="logo__text">Nicolás Reyes<small>chef a domicilio</small></span>
-    </a>
-    <button class="burger" id="burger" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span></button>
-    <nav class="links" id="links">
-      <a href="#servicios">Servicios</a>
-      <a href="#menu">Menú</a>
-      <a href="#proceso">Proceso</a>
-      <a href="#contacto" class="btn btn--sm"><span>Reservar</span></a>
-    </nav>
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="es_ES" />
+  <meta property="og:title" content="Nicolás Reyes — Chef Privado" />
+  <meta property="og:description" content="Cenas privadas, eventos y clases de cocina. Menús de autor diseñados a medida, servidos en tu mesa." />
+  <meta property="og:image" content="images/hero-mesa-elegante.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Nicolás Reyes — Chef Privado" />
+  <meta name="twitter:description" content="Cenas privadas, eventos y clases de cocina. Menús de autor diseñados a medida." />
+  <meta name="twitter:image" content="images/hero-mesa-elegante.jpg" />
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230a0908'/%3E%3Ccircle cx='32' cy='32' r='24' fill='none' stroke='%23c8a76b' stroke-width='1.5'/%3E%3Ctext x='32' y='40' font-family='Georgia,serif' font-size='20' fill='%23e6ce9b' text-anchor='middle'%3ENR%3C/text%3E%3C/svg%3E" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+
+  <noscript>
+    <style>
+      .intro { display: none !important; }
+      body { overflow: auto !important; }
+      .reveal { opacity: 1 !important; transform: none !important; }
+    </style>
+  </noscript>
+</head>
+<body class="is-locked">
+
+  <div class="grain" aria-hidden="true"></div>
+  <div class="progress" id="progress" aria-hidden="true"></div>
+
+  <!-- ===== Intro cinematográfica ===== -->
+  <div class="intro" id="intro">
+    <div class="intro__content">
+      <div class="intro__seal">
+        <svg viewBox="0 0 120 120" aria-hidden="true">
+          <circle class="intro__ring" cx="60" cy="60" r="54" />
+          <circle class="intro__ring intro__ring--inner" cx="60" cy="60" r="43" />
+        </svg>
+        <span class="intro__monogram">NR</span>
+      </div>
+      <p class="intro__name">Nicolás Reyes</p>
+      <p class="intro__role">Chef privado</p>
+      <span class="intro__line"><i></i></span>
+    </div>
+    <button class="intro__skip" id="introSkip" type="button">Saltar</button>
+  </div>
+
+  <!-- ===== Header ===== -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="#inicio" class="brand" aria-label="NR, Nicolás Reyes, chef privado, ir al inicio">
+        <span class="brand__mark">NR</span>
+        <span class="brand__text">
+          <strong>Nicolás Reyes</strong>
+          <small>Chef privado</small>
+        </span>
+      </a>
+
+      <nav class="nav" aria-label="Navegación principal">
+        <a class="nav__link" href="#sobre-mi">El chef</a>
+        <a class="nav__link" href="#experiencias">Experiencias</a>
+        <a class="nav__link" href="#menu">Menú</a>
+        <a class="nav__link" href="#galeria">Galería</a>
+        <a class="btn btn--gold btn--sm nav__cta" href="#contacto" data-magnetic>Reservar</a>
+      </nav>
+
+      <button class="burger" id="burger" type="button" aria-expanded="false" aria-controls="mobileNav" aria-label="Abrir menú">
+        <span></span><span></span>
+      </button>
+    </div>
   </header>
 
-  <main>
-    <!-- HERO -->
-    <section class="hero" id="inicio">
-      <div class="hero__glow" id="glow"></div>
-      <div class="hero__copy">
-        <p class="eyebrow reveal">Chef a domicilio · Experiencias gourmet</p>
-        <h1 class="hero__title">
-          <span class="line"><span>Alta cocina</span></span>
-          <span class="line"><span>en tu propia</span></span>
-          <span class="line"><span><em>mesa.</em></span></span>
-        </h1>
-        <p class="hero__text reveal">Experiencias gourmet y servicios gastronómicos en tu hogar. Menús a medida, producto de estación y una presentación cuidada, para que vos solo disfrutes de la mesa.</p>
-        <div class="hero__cta reveal">
-          <a href="#contacto" class="btn"><span>Reservar una experiencia</span><i class="arrow">→</i></a>
-          <a href="#menu" class="btn btn--ghost"><span>Ver el menú</span></a>
-        </div>
+  <!-- ===== Menú móvil ===== -->
+  <nav class="mobile-nav" id="mobileNav" aria-label="Menú móvil" aria-hidden="true">
+    <div class="mobile-nav__inner">
+      <a href="#sobre-mi">El chef</a>
+      <a href="#experiencias">Experiencias</a>
+      <a href="#menu">Menú</a>
+      <a href="#galeria">Galería</a>
+      <a href="#contacto">Contacto</a>
+      <a class="btn btn--gold mobile-nav__cta" href="#contacto">Reservar experiencia</a>
+      <div class="mobile-nav__contact">
+        <a href="https://wa.me/34600000000" target="_blank" rel="noopener">+34 600 000 000</a>
+        <a href="mailto:hola@nicolasreyes.com">hola@nicolasreyes.com</a>
+        <a href="https://instagram.com/nicolasreyes.chef" target="_blank" rel="noopener">@nicolasreyes.chef</a>
       </div>
-      <figure class="hero__img reveal" style="--d:.3s">
-        <div class="arch"><img class="zoomable" src="plato1.png" alt="Lomo con milhojas de papa, tomates confitados y reducción de frutos rojos"></div>
-        <figcaption class="badge">Servicios<br>Gastronómicos</figcaption>
-      </figure>
-      <div class="scroll-cue" aria-hidden="true"><span></span></div>
+    </div>
+  </nav>
+
+  <main>
+    <!-- ===== Hero ===== -->
+    <section class="hero" id="inicio">
+      <div class="hero__media" id="heroMedia">
+        <img class="hero__img" src="images/hero-mesa-elegante.jpg" alt="Mesa elegante con un plato gourmet y una copa de vino" fetchpriority="high" />
+      </div>
+      <div class="hero__shade" aria-hidden="true"></div>
+
+      <div class="container hero__inner">
+        <p class="eyebrow reveal">Chef privado · Experiencias gastronómicas</p>
+        <h1 class="hero__title reveal" data-delay="1">Alta cocina,<br /><em>en tu mesa.</em></h1>
+        <p class="hero__lead reveal" data-delay="2">
+          Diseño menús de autor y experiencias íntimas para quienes celebran
+          alrededor de una buena mesa. Tú eliges el lugar; yo llevo la cocina.
+        </p>
+        <div class="hero__actions reveal" data-delay="3">
+          <a class="btn btn--gold" href="#contacto" data-magnetic>Reservar experiencia</a>
+          <a class="btn btn--ghost" href="#menu">Explorar el menú</a>
+        </div>
+        <ul class="hero__meta reveal" data-delay="4">
+          <li>Cenas privadas</li>
+          <li>Eventos</li>
+          <li>Clases de cocina</li>
+        </ul>
+      </div>
+
+      <a class="hero__scroll" href="#sobre-mi" aria-label="Descubrir más">
+        <span>Descubrir</span>
+        <i></i>
+      </a>
     </section>
 
-    <!-- CINTA -->
+    <!-- ===== Marquesina ===== -->
     <div class="marquee" aria-hidden="true">
       <div class="marquee__track">
-        <span>Experiencias Gourmet</span><i>✦</i>
-        <span>Servicios Gastronómicos</span><i>✦</i>
-        <span>Chef a domicilio</span><i>✦</i>
-        <span>Menús a medida</span><i>✦</i>
+        <span>Cocina de autor</span><i>✦</i>
+        <span>Menús de temporada</span><i>✦</i>
+        <span>Servicio impecable</span><i>✦</i>
+        <span>A tu mesa</span><i>✦</i>
+        <span>Cocina de autor</span><i>✦</i>
+        <span>Menús de temporada</span><i>✦</i>
+        <span>Servicio impecable</span><i>✦</i>
+        <span>A tu mesa</span><i>✦</i>
       </div>
     </div>
 
-    <!-- SERVICIOS -->
-    <section class="section" id="servicios">
-      <div class="section__head reveal">
-        <p class="eyebrow">Servicios</p>
-        <h2>Cada ocasión, <em>un menú a medida</em></h2>
-      </div>
-      <div class="cards">
-        <article class="card reveal">
-          <span class="card__n">01</span>
-          <h3>Cena íntima</h3>
-          <p>Un menú gourmet de varios pasos, cocinado y servido en tu mesa para una velada especial.</p>
-          <span class="card__line"></span>
-        </article>
-        <article class="card reveal" style="--d:.1s">
-          <span class="card__n">02</span>
-          <h3>Eventos y reuniones</h3>
-          <p>Cumpleaños, aniversarios y encuentros con amigos o familia, con cocina en vivo y servicio completo.</p>
-          <span class="card__line"></span>
-        </article>
-        <article class="card reveal" style="--d:.2s">
-          <span class="card__n">03</span>
-          <h3>Servicios gastronómicos</h3>
-          <p>Propuestas a medida según tu ocasión, tus gustos y la cantidad de invitados.</p>
-          <span class="card__line"></span>
-        </article>
-      </div>
-    </section>
-
-    <!-- EXPERIENCIA -->
-    <section class="section about" id="experiencia">
-      <div class="about__img reveal">
-        <div class="tilt" data-tilt><img class="zoomable" src="plato2.png" alt="Salmón sellado con crema de zapallo, rollitos de zucchini y tomates cherry"></div>
-      </div>
-      <div class="about__copy reveal" style="--d:.15s">
-        <p class="eyebrow">La experiencia</p>
-        <h2>El restaurante, <em>en tu casa</em></h2>
-        <p>Soy Nicolás Reyes. Llevo la cocina de autor a tu hogar: elijo el producto, cocino en vivo y presento cada plato con detalle. Vos disfrutás de la mesa; yo me ocupo de todo lo demás.</p>
-        <ul class="ticks">
-          <li>Menú diseñado según tus gustos</li>
-          <li>Producto fresco y de estación</li>
-          <li>Emplatado cuidado, plato por plato</li>
-          <li>Cocina impecable al terminar</li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- MENÚ -->
-    <section class="section" id="menu">
-      <div class="section__head reveal">
-        <p class="eyebrow">Menú de muestra</p>
-        <h2>Sabores de <em>estación</em></h2>
-      </div>
-      <div class="tabs reveal" role="tablist">
-        <button class="tab active" role="tab" aria-selected="true" data-tab="entradas">Entradas</button>
-        <button class="tab" role="tab" aria-selected="false" data-tab="principales">Principales</button>
-        <button class="tab" role="tab" aria-selected="false" data-tab="postres">Postres</button>
-      </div>
-      <div class="panels">
-        <ul class="panel active" id="entradas">
-          <li><h4>Tartar de atún</h4><p>Palta, sésamo tostado y vinagreta cítrica.</p></li>
-          <li><h4>Burrata</h4><p>Tomates asados, albahaca y aceite de oliva.</p></li>
-          <li><h4>Crema de calabaza</h4><p>Aceite de salvia y semillas crocantes.</p></li>
-        </ul>
-        <ul class="panel" id="principales">
-          <li><h4>Lomo y milhojas de papa</h4><p>Tomates confitados, reducción de frutos rojos y flores comestibles.</p></li>
-          <li><h4>Salmón sellado</h4><p>Crema de zapallo, rollitos de zucchini y tomates cherry.</p></li>
-          <li><h4>Risotto de hongos</h4><p>Parmesano añejo y aceite de trufa.</p></li>
-        </ul>
-        <ul class="panel" id="postres">
-          <li><h4>Volcán de chocolate amargo</h4><p>Corazón fundente y helado de vainilla.</p></li>
-          <li><h4>Panna cotta</h4><p>Vainilla y frutos rojos.</p></li>
-          <li><h4>Tarta de limón deconstruida</h4><p>Merengue flameado y crumble de almendras.</p></li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- PROCESO -->
-    <section class="section" id="proceso">
-      <div class="section__head reveal">
-        <p class="eyebrow">Proceso</p>
-        <h2>Simple de <em>principio a fin</em></h2>
-      </div>
-      <ol class="steps">
-        <li class="reveal"><span>01</span><h3>Nos contás</h3><p>Fecha, cantidad de personas, gustos y restricciones alimentarias.</p></li>
-        <li class="reveal" style="--d:.1s"><span>02</span><h3>Diseñamos el menú</h3><p>Una propuesta personalizada con productos de estación.</p></li>
-        <li class="reveal" style="--d:.2s"><span>03</span><h3>Disfrutás</h3><p>Llegamos, cocinamos, servimos y dejamos todo impecable.</p></li>
-      </ol>
-    </section>
-
-    <!-- CONTACTO -->
-    <section class="section" id="contacto">
-      <div class="section__head reveal">
-        <p class="eyebrow">Contacto</p>
-        <h2>Hablemos de tu <em>próxima mesa</em></h2>
-      </div>
-      <div class="contact">
-        <div class="reveal">
-          <div class="tilt" data-tilt><img class="zoomable cardimg" src="info.png" alt="Tarjeta de Nicolás Reyes, chef a domicilio. Experiencias Gourmet | Servicios Gastronómicos"></div>
-          <div class="direct">
-            <a href="https://wa.me/5491165547782" target="_blank" rel="noopener">
-              <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Z"/><path d="M8.5 8.5c.3 2.6 2.9 5.2 5.6 5.6l1.4-1.4-2-1-.9.7a4 4 0 0 1-1.8-1.8l.7-.9-1-2Z" fill="currentColor"/></svg></span>
-              <span><small>WhatsApp</small>11 6554 7782</span>
-            </a>
-            <a href="mailto:nicolasbraianreyes@gmail.com">
-              <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span>
-              <span><small>Email</small>nicolasbraianreyes@gmail.com</span>
-            </a>
-          </div>
+    <!-- ===== Sobre el chef ===== -->
+    <section class="section about" id="sobre-mi">
+      <div class="container about__grid">
+        <div class="about__media reveal">
+          <figure class="frame">
+            <img src="images/chef-nicolas-reyes.jpg" alt="Retrato de Nicolás Reyes, chef privado" loading="lazy" />
+            <figcaption class="frame__badge">
+              <span>Desde</span>
+              <strong>2012</strong>
+              <span>a tu mesa</span>
+            </figcaption>
+          </figure>
         </div>
 
-        <form class="form reveal" id="form" style="--d:.15s" novalidate>
-          <label class="full">Nombre<input type="text" name="nombre" required placeholder="Tu nombre"></label>
-          <label>Fecha<input type="date" name="fecha" required></label>
-          <label>Comensales<input type="number" name="comensales" min="2" max="40" value="4" required></label>
-          <label class="full">Tipo de experiencia
-            <select name="tipo">
-              <option>Cena íntima</option>
-              <option>Evento o reunión</option>
-              <option>Servicio gastronómico a medida</option>
-            </select>
-          </label>
-          <label class="full">Mensaje<textarea name="mensaje" rows="3" placeholder="Alergias, gustos, ocasión..."></textarea></label>
-          <button type="submit" class="btn full"><span>Enviar por WhatsApp</span><i class="arrow">→</i></button>
+        <div class="about__copy">
+          <p class="eyebrow reveal">El chef</p>
+          <h2 class="h2 reveal" data-delay="1">Cocina con alma,<br /><em>servicio con precisión.</em></h2>
+          <p class="lead reveal" data-delay="2">
+            Soy Nicolás Reyes, chef privado. Llevo más de una década creando
+            experiencias gastronómicas en casas, terrazas y espacios singulares.
+          </p>
+          <p class="reveal" data-delay="2">
+            Mi cocina parte del producto de temporada y termina en el detalle:
+            un menú pensado para cada mesa, un ritmo cuidado y una hospitalidad
+            que se recuerda mucho después del último plato.
+          </p>
+          <p class="signature reveal" data-delay="3">Nicolás Reyes</p>
+
+          <dl class="stats reveal" data-delay="3">
+            <div>
+              <dt><span data-count="12">12</span>+</dt>
+              <dd>Años de oficio</dd>
+            </div>
+            <div>
+              <dt><span data-count="350">350</span>+</dt>
+              <dd>Eventos servidos</dd>
+            </div>
+            <div>
+              <dt><span data-count="8000">8.000</span>+</dt>
+              <dd>Comensales felices</dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Experiencias ===== -->
+    <section class="section experiences" id="experiencias">
+      <div class="container">
+        <header class="section-head">
+          <div>
+            <p class="eyebrow reveal">Experiencias</p>
+            <h2 class="h2 reveal" data-delay="1">Tres formas de<br /><em>vivir la mesa.</em></h2>
+          </div>
+          <p class="section-head__aside reveal" data-delay="2">
+            Cada experiencia se diseña contigo: producto, ritmo, vajilla y
+            servicio. Nada se deja al azar.
+          </p>
+        </header>
+
+        <div class="exp-grid">
+          <a class="exp reveal" href="#contacto">
+            <div class="exp__media">
+              <img src="images/experiencia-cena-privada.jpg" alt="Platos gourmet elegantemente emplatados" loading="lazy" />
+            </div>
+            <div class="exp__body">
+              <span class="exp__num">01</span>
+              <h3>Cenas privadas</h3>
+              <p>Un menú de autor en la intimidad de tu casa, con servicio completo y maridaje opcional.</p>
+              <span class="exp__link">Descubrir <i>→</i></span>
+            </div>
+          </a>
+
+          <a class="exp reveal" data-delay="1" href="#contacto">
+            <div class="exp__media">
+              <img src="images/experiencia-eventos.jpg" alt="Mesa preparada con platos mediterráneos y vino" loading="lazy" />
+            </div>
+            <div class="exp__body">
+              <span class="exp__num">02</span>
+              <h3>Eventos &amp; celebraciones</h3>
+              <p>Cumpleaños, aniversarios y encuentros corporativos con una experiencia gastronómica a medida.</p>
+              <span class="exp__link">Descubrir <i>→</i></span>
+            </div>
+          </a>
+
+          <a class="exp reveal" data-delay="2" href="#contacto">
+            <div class="exp__media">
+              <img src="images/experiencia-clases.jpg" alt="Chef cortando verduras en una cocina moderna" loading="lazy" />
+            </div>
+            <div class="exp__body">
+              <span class="exp__num">03</span>
+              <h3>Clases &amp; talleres</h3>
+              <p>Aprende técnicas, productos y secretos en una clase cercana, práctica y deliciosa.</p>
+              <span class="exp__link">Descubrir <i>→</i></span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Menú ===== -->
+    <section class="section menu" id="menu">
+      <div class="container menu__grid">
+        <div class="menu__aside reveal">
+          <p class="eyebrow">La carta</p>
+          <h2 class="h2">Un menú que cambia<br /><em>con la estación.</em></h2>
+          <p class="menu__note">
+            Cada propuesta nace de una conversación. Estos son algunos platos
+            que pueden formar parte de tu experiencia; el menú final se diseña
+            para tu mesa.
+          </p>
+
+          <figure class="menu__figure">
+            <img src="images/menu-caviar.jpg" alt="Plato de caviar con presentación artística" loading="lazy" />
+            <figcaption>
+              <span>Menú degustación</span>
+              <strong>7 tiempos</strong>
+            </figcaption>
+          </figure>
+        </div>
+
+        <div class="menu__panel reveal" data-delay="1">
+          <div class="tabs" role="tablist" aria-label="Categorías del menú">
+            <button class="tab is-active" id="tab-entradas" type="button" role="tab" aria-selected="true" aria-controls="panel-entradas" data-tab="entradas">Entradas</button>
+            <button class="tab" id="tab-principales" type="button" role="tab" aria-selected="false" aria-controls="panel-principales" data-tab="principales" tabindex="-1">Principales</button>
+            <button class="tab" id="tab-postres" type="button" role="tab" aria-selected="false" aria-controls="panel-postres" data-tab="postres" tabindex="-1">Postres</button>
+          </div>
+
+          <div class="menu__panels">
+            <div class="menu__list is-active" id="panel-entradas" role="tabpanel" aria-labelledby="tab-entradas">
+              <article class="dish">
+                <div><h3>Ostra, manzana verde y wasabi</h3><p>Bivalvo fresco, granizado de manzana y un final picante.</p></div>
+                <span class="dish__tag">Fresco</span>
+              </article>
+              <article class="dish">
+                <div><h3>Brioche de mantequilla ahumada</h3><p>Pan brioche templado, mantequilla noisette y sal de humo.</p></div>
+                <span class="dish__tag">De la casa</span>
+              </article>
+              <article class="dish">
+                <div><h3>Remolacha asada, cítricos y eneldo</h3><p>Remolacha al rescoldo, crema de cítricos y hierbas frescas.</p></div>
+                <span class="dish__tag">Vegetal</span>
+              </article>
+            </div>
+
+            <div class="menu__list" id="panel-principales" role="tabpanel" aria-labelledby="tab-principales" hidden>
+              <article class="dish">
+                <div><h3>Pescado de lonja, beurre blanc y algas</h3><p>Producto del día, salsa mantecada y textura crujiente de algas.</p></div>
+                <span class="dish__tag">Mar</span>
+              </article>
+              <article class="dish">
+                <div><h3>Cochinillo meloso, puré de manzana</h3><p>Cocción lenta, piel crujiente y un equilibrio ácido perfecto.</p></div>
+                <span class="dish__tag">Fuego</span>
+              </article>
+              <article class="dish">
+                <div><h3>Setas de temporada, yema y trufa</h3><p>Setas salteadas, yema curada y aroma de trufa negra.</p></div>
+                <span class="dish__tag">Tierra</span>
+              </article>
+            </div>
+
+            <div class="menu__list" id="panel-postres" role="tabpanel" aria-labelledby="tab-postres" hidden>
+              <article class="dish">
+                <div><h3>Chocolate, avellana y sal marina</h3><p>Ganache intensa, praliné crujiente y un final salino.</p></div>
+                <span class="dish__tag">Intenso</span>
+              </article>
+              <article class="dish">
+                <div><h3>Cítricos, yogur y miel</h3><p>Frescor cítrico, yogur batido y miel de romero.</p></div>
+                <span class="dish__tag">Ligero</span>
+              </article>
+              <article class="dish">
+                <div><h3>Higo asado, vainilla y almendra</h3><p>Higo de temporada, helado de vainilla y tuile de almendra.</p></div>
+                <span class="dish__tag">Temporada</span>
+              </article>
+            </div>
+          </div>
+
+          <div class="menu__cta">
+            <p>Menús desde 6 comensales · Maridaje opcional · Adaptable a intolerancias.</p>
+            <a class="btn btn--ghost btn--sm" href="#contacto" data-magnetic>Diseñar mi menú</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Galería ===== -->
+    <section class="section gallery" id="galeria">
+      <div class="container">
+        <header class="section-head section-head--center">
+          <div>
+            <p class="eyebrow reveal">Galería</p>
+            <h2 class="h2 reveal" data-delay="1">El detalle también<br /><em>se saborea.</em></h2>
+          </div>
+        </header>
+
+        <div class="gallery__grid">
+          <button class="shot reveal" type="button" data-full="images/galeria-01-platos.jpg" data-caption="Fine dining · Presentación de autor">
+            <img src="images/galeria-01-platos.jpg" alt="Platos finamente presentados en una mesa de alta cocina" loading="lazy" />
+            <span class="shot__zoom" aria-hidden="true">+</span>
+          </button>
+          <button class="shot reveal" data-delay="1" type="button" data-full="images/galeria-02-marisco.jpg" data-caption="Producto de mar · Elegancia en el plato">
+            <img src="images/galeria-02-marisco.jpg" alt="Plato de marisco finamente emplatado" loading="lazy" />
+            <span class="shot__zoom" aria-hidden="true">+</span>
+          </button>
+          <button class="shot reveal" data-delay="2" type="button" data-full="images/galeria-03-postre-chocolate.jpg" data-caption="Postre de autor · Chocolate y flor">
+            <img src="images/galeria-03-postre-chocolate.jpg" alt="Postre de chocolate decorado con una flor comestible" loading="lazy" />
+            <span class="shot__zoom" aria-hidden="true">+</span>
+          </button>
+          <button class="shot reveal" type="button" data-full="images/galeria-04-plato-minimalista.jpg" data-caption="Minimalismo · Salsa y textura">
+            <img src="images/galeria-04-plato-minimalista.jpg" alt="Plato gourmet minimalista visto desde arriba" loading="lazy" />
+            <span class="shot__zoom" aria-hidden="true">+</span>
+          </button>
+          <button class="shot reveal" data-delay="1" type="button" data-full="images/galeria-05-mesa-restaurante.jpg" data-caption="La mesa · Luz cálida, servicio impecable">
+            <img src="images/galeria-05-mesa-restaurante.jpg" alt="Restaurante elegante con mesas de madera y luz cálida" loading="lazy" />
+            <span class="shot__zoom" aria-hidden="true">+</span>
+          </button>
+          <button class="shot reveal" data-delay="2" type="button" data-full="images/galeria-06-ravioli.jpg" data-caption="Pasta fresca · Salsa y hierbas">
+            <img src="images/galeria-06-ravioli.jpg" alt="Ravioli gourmet con salsa de tomate y hierbas" loading="lazy" />
+            <span class="shot__zoom" aria-hidden="true">+</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Testimonios ===== -->
+    <section class="section quotes" aria-label="Testimonios">
+      <div class="container quotes__inner reveal">
+        <p class="eyebrow eyebrow--center">Testimonios</p>
+
+        <div class="quotes__stage" id="quotes">
+          <blockquote class="quote is-active">
+            <p>“Nicolás convirtió nuestro aniversario en una experiencia inolvidable. Cada plato tenía una historia y la mesa, otra luz.”</p>
+            <footer><strong>Marta &amp; Diego</strong><span>Cena privada</span></footer>
+          </blockquote>
+          <blockquote class="quote">
+            <p>“La precisión del servicio y la calidez del chef hicieron que todo fluyera. Nuestros invitados aún hablan de la cena.”</p>
+            <footer><strong>Laura Méndez</strong><span>Evento corporativo</span></footer>
+          </blockquote>
+          <blockquote class="quote">
+            <p>“Aprendimos, cocinamos y nos reímos. La clase fue tan generosa como deliciosa. Repetiremos sin dudarlo.”</p>
+            <footer><strong>Andrés P.</strong><span>Taller de cocina</span></footer>
+          </blockquote>
+        </div>
+
+        <div class="quotes__nav">
+          <button class="circle-btn" id="quotePrev" type="button" aria-label="Testimonio anterior">←</button>
+          <div class="quotes__dots" id="quoteDots"></div>
+          <button class="circle-btn" id="quoteNext" type="button" aria-label="Testimonio siguiente">→</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Contacto ===== -->
+    <section class="section contact" id="contacto">
+      <div class="container contact__grid">
+        <div class="contact__info">
+          <p class="eyebrow reveal">Contacto</p>
+          <h2 class="h2 reveal" data-delay="1">Diseñemos tu<br /><em>próxima experiencia.</em></h2>
+          <p class="lead reveal" data-delay="2">
+            Cuéntame la fecha, el lugar y lo que imaginas. Te responderé en
+            menos de 24 horas con una propuesta a medida.
+          </p>
+
+          <ul class="contact__list">
+            <li class="reveal">
+              <span>WhatsApp</span>
+              <a href="https://wa.me/34600000000" target="_blank" rel="noopener">+34 600 000 000</a>
+            </li>
+            <li class="reveal" data-delay="1">
+              <span>Email</span>
+              <a href="mailto:hola@nicolasreyes.com">hola@nicolasreyes.com</a>
+            </li>
+            <li class="reveal" data-delay="2">
+              <span>Instagram</span>
+              <a href="https://instagram.com/nicolasreyes.chef" target="_blank" rel="noopener">@nicolasreyes.chef</a>
+            </li>
+          </ul>
+
+          <p class="contact__note reveal" data-delay="3">
+            Eventos privados y corporativos · Disponible para viajar.
+          </p>
+        </div>
+
+        <form class="form reveal" data-delay="2" id="bookingForm" novalidate>
+          <div class="form__row">
+            <div class="field">
+              <label for="name">Nombre</label>
+              <input id="name" name="name" type="text" autocomplete="name" placeholder="Tu nombre" required />
+              <span class="field__error" data-error></span>
+            </div>
+            <div class="field">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" autocomplete="email" placeholder="tu@email.com" required />
+              <span class="field__error" data-error></span>
+            </div>
+          </div>
+
+          <div class="form__row">
+            <div class="field">
+              <label for="type">Tipo de experiencia</label>
+              <select id="type" name="type" required>
+                <option value="">Selecciona una opción</option>
+                <option>Cena privada</option>
+                <option>Evento o celebración</option>
+                <option>Evento corporativo</option>
+                <option>Clase de cocina</option>
+                <option>Otro</option>
+              </select>
+              <span class="field__error" data-error></span>
+            </div>
+            <div class="field">
+              <label for="date">Fecha tentativa</label>
+              <input id="date" name="date" type="date" />
+            </div>
+          </div>
+
+          <div class="form__row">
+            <div class="field">
+              <label for="guests">Comensales</label>
+              <input id="guests" name="guests" type="number" min="1" max="200" placeholder="Ej. 8" />
+            </div>
+            <div class="field">
+              <label for="city">Ciudad / lugar</label>
+              <input id="city" name="city" type="text" placeholder="Dónde te gustaría" autocomplete="address-level2" />
+            </div>
+          </div>
+
+          <div class="field field--full">
+            <label for="message">Cuéntame tu idea</label>
+            <textarea id="message" name="message" rows="4" placeholder="Tipo de ocasión, estilo de menú, alergias..." required></textarea>
+            <span class="field__error" data-error></span>
+          </div>
+
+          <button class="btn btn--gold form__submit" type="submit" data-magnetic>Enviar solicitud</button>
+          <p class="form__status" id="formStatus" role="status" aria-live="polite"></p>
+          <p class="form__note">Al enviar se abrirá WhatsApp con tu solicitud preparada. También puedes escribirme por email.</p>
         </form>
       </div>
     </section>
   </main>
 
+  <!-- ===== Footer ===== -->
   <footer class="footer">
-    <a href="#inicio" class="logo"><span class="logo__text">Nicolás Reyes<small>chef a domicilio</small></span></a>
-    <p>Experiencias Gourmet | Servicios Gastronómicos</p>
-    <p>© <span id="year"></span> Nicolás Reyes</p>
+    <div class="container">
+      <p class="footer__name" aria-hidden="true">Nicolás Reyes</p>
+
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <span class="brand__mark">NR</span>
+          <p>Chef privado · Experiencias gastronómicas a medida.</p>
+        </div>
+        <nav class="footer__nav" aria-label="Navegación del pie">
+          <a href="#sobre-mi">El chef</a>
+          <a href="#experiencias">Experiencias</a>
+          <a href="#menu">Menú</a>
+          <a href="#galeria">Galería</a>
+          <a href="#contacto">Contacto</a>
+        </nav>
+        <div class="footer__social">
+          <a href="https://instagram.com/nicolasreyes.chef" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://wa.me/34600000000" target="_blank" rel="noopener">WhatsApp</a>
+          <a href="mailto:hola@nicolasreyes.com">Email</a>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p>© <span id="year">2026</span> Nicolás Reyes · Chef privado</p>
+        <p>Diseño con detalle · Alta cocina</p>
+      </div>
+    </div>
   </footer>
 
-  <a href="https://wa.me/5491165547782" class="wa" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Z"/><path d="M8.5 8.5c.3 2.6 2.9 5.2 5.6 5.6l1.4-1.4-2-1-.9.7a4 4 0 0 1-1.8-1.8l.7-.9-1-2Z" fill="currentColor"/></svg>
+  <!-- ===== WhatsApp flotante ===== -->
+  <a class="wa" href="https://wa.me/34600000000" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.2-1.8-.9-2.1-1-.3-.1-.5-.2-.7.1-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6.1-.1.3-.4.5-.6.2-.2.2-.3.3-.5.1-.2 0-.4 0-.5 0-.2-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1.1 1.1-1.1 2.6s1.1 3 1.3 3.2c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.7.6.7.2 1.3.2 1.8.1.6-.1 1.8-.7 2.1-1.4.3-.7.3-1.4.2-1.5-.1-.2-.3-.2-.6-.3ZM12 21.5c-1.7 0-3.3-.5-4.7-1.3l-.3-.2-3.5.9.9-3.4-.2-.3A9.4 9.4 0 0 1 2.5 12 9.5 9.5 0 0 1 12 2.5 9.5 9.5 0 0 1 21.5 12 9.5 9.5 0 0 1 12 21.5Zm0-21A11.5 11.5 0 0 0 .5 12c0 2 .5 4 1.5 5.7L.5 23.5l6-1.6c1.7.9 3.6 1.4 5.5 1.4A11.5 11.5 0 0 0 23.5 12 11.5 11.5 0 0 0 12 .5Z"/></svg>
+    <span class="wa__label">WhatsApp</span>
   </a>
 
-  <div class="lightbox" id="lightbox"><button type="button" aria-label="Cerrar">✕</button><img alt=""></div>
+  <!-- ===== Lightbox ===== -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Imagen ampliada" aria-hidden="true">
+    <button class="lightbox__close" id="lbClose" type="button" aria-label="Cerrar">×</button>
+    <button class="lightbox__nav lightbox__nav--prev" id="lbPrev" type="button" aria-label="Imagen anterior">←</button>
+    <figure class="lightbox__figure">
+      <img id="lbImg" src="" alt="" />
+      <figcaption id="lbCaption"></figcaption>
+    </figure>
+    <button class="lightbox__nav lightbox__nav--next" id="lbNext" type="button" aria-label="Imagen siguiente">→</button>
+  </div>
 
-  <script src="script.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
